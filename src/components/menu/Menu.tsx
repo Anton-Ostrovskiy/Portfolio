@@ -49,4 +49,7 @@ const StyledMenu = styled.nav<{marginBot?:string}>`
             }
         }
     }
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `

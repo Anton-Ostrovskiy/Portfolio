@@ -5,6 +5,7 @@ import { Menu } from '../../components/menu/Menu';
 import { SocialList } from '../../components/socialList/SocialList';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
+import { MobileMenu } from '../../components/menu/MobileMenu';
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
 
@@ -16,6 +17,7 @@ export const Header = () => {
           <Logo />
           <StyledMenu>
             <Menu menuItems={items} />
+            <MobileMenu menuItems={items}/>
             <SocialList />
           </StyledMenu>
         </FlexWrapper>

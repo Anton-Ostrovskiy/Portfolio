@@ -1,3 +1,4 @@
+import { Button } from './../components/Button';
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
 
@@ -99,5 +100,10 @@ a{
 
 ul {
     list-style: none;
+}
+
+button {
+  background-color: unset;
+  border: none;
 }
 `
