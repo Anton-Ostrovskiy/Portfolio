@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Menu } from '../../../components/menu/Menu'
@@ -7,6 +6,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Project } from './project/Project'
 import { Container } from '../../../components/Container'
 import { items } from './projectData'
+import { theme } from '../../../styles/Theme'
 
 const worksItems = ["All", "Landing page", "React", "SPA"]
 
@@ -38,4 +38,10 @@ const GridWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 65px;
+  @media ${theme.media.tablet} {
+          grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${theme.media.mobile} {
+          grid-template-columns: 1fr;
+  }
 `

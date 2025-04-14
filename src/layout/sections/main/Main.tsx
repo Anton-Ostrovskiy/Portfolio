@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import photo from '../../../assets/images/photo.jpg'
 import { FlexWrapper } from '../../../components/FlexWrapper'
@@ -8,7 +7,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"}>
+                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
                     <TextWrapper>
                         <Text>Hi</Text>
                         <Name>I am Anton</Name>

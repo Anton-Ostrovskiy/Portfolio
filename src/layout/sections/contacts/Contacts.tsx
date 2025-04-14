@@ -1,6 +1,5 @@
-import React from 'react'
 import styled from 'styled-components'
-import { SectionTitle } from '../../../components/SectionTitle'
+// import { SectionTitle } from '../../../components/SectionTitle'
 import { Button } from '../../../components/Button'
 import { Container } from '../../../components/Container'
 import { Icon } from '../../../components/icon/Icon'
@@ -58,6 +57,7 @@ const StyledForm = styled.form`
 const ContentWrapper = styled.div`
     display: flex;
     justify-content: space-between;
+    flex-wrap:wrap;
 `
 
 const TitleWrapper = styled.div`

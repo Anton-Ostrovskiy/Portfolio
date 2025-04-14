@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import styled, { css } from 'styled-components'
 import { theme } from '../../styles/Theme'
 
@@ -8,12 +8,19 @@ type MenuPropsType = {
 }
 
 export const MobileMenu = (props: MenuPropsType) => {
+
+    const [open, isOpen] = useState(false);
+
+    const toggleMenu = () => {
+        isOpen(!open)
+    }
+
     return (
         <StyledMobileMenu marginBot={props.marginBot}>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={open} onClick={toggleMenu}>
                 <span></span>
             </BurgerButton>
-            <MobileMenuWrapper isOpen={true}>
+            <MobileMenuWrapper isOpen={open}>
                 <ul>
                     {props.menuItems.map((item, index) => {
                         return <li key={index}>
