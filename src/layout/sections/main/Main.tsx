@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import photo from '../../../assets/images/photo.jpg'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Container } from '../../../components/Container'
+import { font } from '../../../styles/Common'
 
 export const Main = () => {
     return (
@@ -58,12 +59,13 @@ const TextWrapper = styled.div`
 `
 
 const MainTitle = styled.h1`
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 58px;
-    line-height: 1.2069;
+    ${font({family: "'Poppins', sans-serif",weight:700,color: "#d9d9d9",lineHeight:1.2069,Fmax:58,Fmin:36})}
+    // font-family: "Poppins", sans-serif;
+    // font-weight: 700;
+    // font-size: 58px;
+    // line-height: 1.2069;
     letter-spacing: -0.02em;
-    color: #d9d9d9;
+    // color: #d9d9d9;
 `
 
 const Name = styled.p`

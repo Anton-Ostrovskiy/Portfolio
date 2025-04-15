@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Logo } from '../../components/logo/Logo';
 import { Menu } from '../../components/menu/Menu';
-import { SocialList } from '../../components/socialList/SocialList';
+import { SocialList, StyledSocialList } from '../../components/socialList/SocialList';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { MobileMenu } from '../../components/menu/MobileMenu';
@@ -32,6 +32,10 @@ const StyledHeader = styled.header`
   padding: 40px 0;
   background-color: #191919;
   z-index: 1;
+
+  ${StyledSocialList} {
+    display: none;
+  }
 `
 // const StyledContainer = styled.div`
 //   display: flex;
