@@ -2,7 +2,7 @@ export const items = [
     {
         iconId: "html",
         title: "HTML5",
-        precentage:"10%",
+        precentage:"80%",
     },
     {
         iconId: "css",
@@ -12,17 +12,17 @@ export const items = [
     {
         iconId: "js",
         title:"JavaScript",
-        precentage:"50%",
+        precentage:"55%",
     },
     {
         iconId: "react",
         title:"React",
-        precentage:"50%",
+        precentage:"35%",
     },
     {
-        iconId: "git",
+        iconId: "git-skill",
         title:"Git",
-        precentage:"50%",
+        precentage:"45%",
         fill:"#fffefe",
     },
 ]

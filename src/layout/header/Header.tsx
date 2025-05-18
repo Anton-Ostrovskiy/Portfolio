@@ -5,15 +5,35 @@ import { SocialList, StyledSocialList } from '../../components/socialList/Social
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { MobileMenu } from '../../components/menu/MobileMenu';
+import { theme } from '../../styles/Theme';
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Contact"]
+const items = [
+  {
+      title:"Home",
+      href: "home"
+  },
+  {
+      title:"Tech Stack",
+      href: "techstack"
+  },
+  {
+      title:"Projects",
+      href: "project"
+  },
+  {
+      title:"Contact",
+      href: "contact"
+  },
+]
+
+
 
 export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper justify={"space-between"} align={"center"}>
-          <Logo />
+        <FlexWrapper justify={"space-between"} align={"center"} gap={"50px"}>
+          <Logo aria-label='logo'/>
           <StyledMenu>
             <Menu menuItems={items} />
             <MobileMenu menuItems={items}/>
@@ -28,13 +48,17 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   position: fixed;
-  width: 100%;
-  padding: 40px 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 20px 0;
   background-color: #191919;
   z-index: 1;
 
-  ${StyledSocialList} {
-    display: none;
+  @media ${theme.media.tablet}{
+    ${StyledSocialList} {
+      display: none;
+    }
   }
 `
 // const StyledContainer = styled.div`
@@ -47,4 +71,6 @@ const StyledHeader = styled.header`
 const StyledMenu = styled.div`
   display: flex;
   gap: 50px;
+  flex-grow: 1;
+  justify-content: flex-end;
 `

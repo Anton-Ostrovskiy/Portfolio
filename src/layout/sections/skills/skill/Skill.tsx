@@ -1,18 +1,19 @@
 import styled from 'styled-components'
 import { Icon } from '../../../../components/icon/Icon'
 import { theme } from '../../../../styles/Theme'
+import { Slide } from "react-awesome-reveal";
 
 type SkillPropsType = {
-    item:{
-        iconId:string
+    item: {
+        iconId: string
         title: string
-        precentage:string
-        fill?:string
+        precentage: string
+        fill?: string
     }
-    
+
 }
 
-export const Skill = (props:SkillPropsType) => {
+export const Skill = (props: SkillPropsType) => {
     // const { item } = props;
     return (
         <StyledSkill>
@@ -24,11 +25,13 @@ export const Skill = (props:SkillPropsType) => {
                     <Title>
                         {props.item.title}
                     </Title>
+                        <Slide
+                            triggerOnce
+                        >
                     <SkillBar>
-                        <ProgressSkill style={{width:props.item.precentage}}>
-                            {/* <span>{props.item.precentage}</span> */}
-                        </ProgressSkill>
+                            <ProgressSkill precentage={props.item.precentage} />
                     </SkillBar>
+                        </Slide>
                 </SkillBarWrapper>
             </Content>
         </StyledSkill>
@@ -45,12 +48,11 @@ const IconWrapper = styled.div`
 `
 
 const SkillBarWrapper = styled.div`
-    width: 50vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     margin-left: 1rem;
+    gap: 5px;
 `
 
 const Content = styled.div`
@@ -63,8 +65,11 @@ const Title = styled.h3`
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 28px;
-    line-height: 0.92857;
+    line-height: 1;
     color: ${theme.colors.font};
+    @media ${theme.media.tablet}{
+        font-size: 24px;
+    }
 `
 
 const SkillBar = styled.div`
@@ -74,17 +79,24 @@ const SkillBar = styled.div`
     border-radius:20px;
     background-color: #a19e9e;
     border:1px solid gray;
+    @media ${theme.media.mobile}{
+        height:15px;
+    }
 `
 
-const ProgressSkill = styled.div`
-    /* width: 0; */
+const ProgressSkill = styled.div<{ precentage: string }>`
+    width:${({ precentage }) => precentage};
     height: 100%;
     /* transition: width .5s; */
     background: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
     border-radius:20px;
-    animation: loading 2s forwards;
+    animation: loading 2s ease-in-out forwards;
+    animation-delay: .2s;
 
     @keyframes loading {
+        0%{
+            width: 0;
+        }
         100%{
             width:"precentage";
         }

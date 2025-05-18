@@ -1,6 +1,7 @@
 import { Button } from './../components/Button';
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
+import { section } from 'motion/react-client';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -96,6 +97,7 @@ body {
 
 a{
     text-decoration: none;
+    color:${theme.colors.font};
 }
 
 ul {
@@ -105,5 +107,9 @@ ul {
 button {
   background-color: unset;
   border: none;
+}
+
+section {
+  padding: 100px 0;
 }
 `

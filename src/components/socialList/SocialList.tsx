@@ -10,17 +10,17 @@ export const SocialList = () => {
   return (
     <StyledSocialList>
         <SocialItem>
-            <SocialLink href="#git">
+            <SocialLink href="https://github.com/" aria-label="git-link">
                 <Icon iconId={"git"} fill={'#A7A7A7'}/>
             </SocialLink>
         </SocialItem>
         <SocialItem>
-            <SocialLink href="#twitter">
+            <SocialLink href="https://x.com/" aria-label="twitter-link">
                 <Icon iconId={"twitter"} viewBox={"0 0 31 31"} fill={'#A7A7A7'}/>
             </SocialLink>
         </SocialItem>
         <SocialItem>
-            <SocialLink href="#link">
+            <SocialLink href="https://linkedin.com/" aria-label="linkedin-link">
                 <Icon iconId={"linkedin"} fill={'#A7A7A7'}/>
             </SocialLink>
         </SocialItem>
@@ -45,7 +45,7 @@ const SocialLink = styled.a.attrs((props)=>({
         transition: 1s;
     }
     &:hover svg{
-        fill: red;
+        fill: #3894d1;
         transform: scale(1.1)
     }
 `

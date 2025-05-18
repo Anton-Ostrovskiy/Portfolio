@@ -24,11 +24,11 @@ export const Project = (props: ProjectPropsType) => {
         <LinkWrapper>
           <PreviewLink>
             <Icon width={"20"} height={"20"} viewBox={"0 0 20 20"} iconId={"chain"} />
-            <Link href={"#"}>Live Preview</Link>
+            <Link href={"#!"}>Live Preview</Link>
           </PreviewLink>
           <CodeLink>
-            <Icon width={"20"} height={"20"} viewBox={"0 0 30 30"} iconId={"git"} />
-            <Link href={"#"}>View Code</Link>
+            <Icon width={"20"} height={"20"} viewBox={"0 0 30 30"} iconId={"git"} fill={"white"}/>
+            <Link href={"#!"}>View Code</Link>
           </CodeLink>
         </LinkWrapper>
       </ContentWrapper>
@@ -38,7 +38,7 @@ export const Project = (props: ProjectPropsType) => {
 
 const StyledProject = styled.div`
     width: 100%;
-    max-width:375px;
+    max-width:550px;
     background: #363636;
     border-radius: 20px;
 `
@@ -53,7 +53,7 @@ const Image = styled.img`
 `
 
 const ContentWrapper = styled.div`
-text-align: start;
+  text-align: start;
   padding: 25px 30px;
 `
 
@@ -81,11 +81,13 @@ const TechStack = styled.p`
 const Link = styled.a`
     text-decoration: underline;
     color:#fff;
+    white-space: nowrap;
 `
 
 const LinkWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 `
 
 const PreviewLink = styled.div`
